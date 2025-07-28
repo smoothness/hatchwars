@@ -1,6 +1,7 @@
 const API_BASE_URL = import.meta.env.VITE_API_ENDPOINT
 
 import type { Planet } from '@/types'
+import { createPlanetSlug } from '@/utils/planetUtils'
 
 type PlanetsListPromise = {
   results: Planet[]
@@ -17,4 +18,15 @@ async function getPlanets(): Promise<PlanetsListPromise> {
   return planetsPromise
 }
 
-export { getPlanets }
+async function getPlanetBySlug(slug: string): Promise<Planet> {
+  const planetsResponse = await getPlanets()
+  const planet = planetsResponse.results.find((p) => createPlanetSlug(p.name) === slug)
+
+  if (!planet) {
+    throw new Error(`Planet with not found 💩`)
+  }
+
+  return planet
+}
+
+export { getPlanets, getPlanetBySlug }

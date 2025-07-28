@@ -5,11 +5,11 @@ import Navigation from '@/components/Navigation'
 function Layout() {
   return (
     <div className="min-h-screen grid grid-rows-[auto_1fr_auto]" dir="ltr">
-      <header className="flex justify-between items-center">
-        <h1 className="text-xl">HatchWars 🌃</h1>
+      <header className="flex justify-between items-center [@media(max-width:1440px)]:px-10">
+        <h1 className="[@media(max-width:700px)]:!text-4xl">HatchWars 🌃</h1>
         <Navigation />
       </header>
-      <main className="py-8">
+      <main className="py-8 [@media(max-width:1440px)]:px-10">
         <Outlet />
       </main>
       <footer className="p-8 text-center">

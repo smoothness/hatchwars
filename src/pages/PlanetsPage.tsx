@@ -11,7 +11,7 @@ function PlanetsPage() {
       </section>
       <section>
         <h3 className="!mb-4">Select a planet from the list</h3>
-        <ErrorBoundary fallback={<p>Something went wrong fetching planets</p>}>
+        <ErrorBoundary fallback={<p>Something went wrong fetching planets 💩</p>}>
           <Suspense fallback={<p>Loading planets...</p>}>
             <PlanetsList />
           </Suspense>

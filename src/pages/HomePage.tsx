@@ -25,6 +25,12 @@ function HomePage() {
         <p className="mb-6">I tried to implement all the requirements that Juan Carlos sent me, including:</p>
         <ul className="!list-disc pl-6">
           <li>
+            Link to repo:{' '}
+            <a href="https://github.com/smoothness/hatchwars" target="_blank" rel="noopener noreferrer">
+              https://github.com/smoothness/hatchwars
+            </a>
+          </li>
+          <li>
             React with NO framework... I have not work on a SPA for ages, been on Next.js for over 5 years, so this was
             a nice challenge to go back to basics.
           </li>
